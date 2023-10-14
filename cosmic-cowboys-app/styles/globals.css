@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PP NeueBit";
+  src: url("../public/PPNeueBit-Bold.otf");
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .angled-border {
+      clip-path: polygon(12% 0%, 88% 0%, 100% 12%, 100% 88%, 88% 100%, 12% 100%, 0% 88%, 0% 12%);
+    }
+
+    .pill-full {
+      border-radius: 100px;
+      background: #FF7D05;
+      mix-blend-mode: plus-lighter;
+      box-shadow: 0px 1px 10px 0px #FF5E05;
+    }
+  }
+}
+
